@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+    ul
+      each message in messages
+        h1 #{message.user}
+        p= message.text
+        h5= message.added
+
+  a(href="/new") New Post 
